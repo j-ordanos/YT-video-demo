@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link type="image/png" rel="icon" href="assets/fav-icon.png" />
+
+    <title>YT vid</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>YT <span>vid</span></h1>
+      </div>
+      <div class="main-container">
+        <div class="search-bar">
+          <i class="fa fa-search" aria-hidden="true" style="color: #ffdf01"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search video here"
+          />
+          <button id="find-btn">Find</button>
+        </div>
+
+        <!-- Loading Animation -->
+        <div class="loading-animation">
+          <dotlottie-player
+            src="https://lottie.host/5a981168-afc7-46e7-9043-64100775f4a6/eqaSu2J8hN.lottie"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          >
+          </dotlottie-player>
+        </div>
+
+        <div class="search-list-container" id="search-list-container">
+          <!-- Dynamic search results will be appended here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal">
+      <div class="modal-content">
+        <button class="close-btn" id="close-btn">
+          <i class="fa fa-window-close" aria-hidden="true"></i>
+        </button>
+        <iframe
+          id="modal-video"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="footer" id="footer">
+      <div class="api-key-section">
+        <fieldset>
+          <legend>Your API key</legend>
+          <input type="text" id="api-key" placeholder="Enter API Key here" />
+          <button id="useBtn">Use</button>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>
