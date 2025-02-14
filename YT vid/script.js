@@ -54,8 +54,11 @@ async function fetchSearchResults(query) {
   }
 }
 
-//on 'Find' button click 
-document.getElementById('find-btn').addEventListener('click', async () => {
+//add event listener 'Find' button 
+document.getElementById('find-btn').addEventListener('click', handleSearch);
+
+// handle search videos
+async function handleSearch(){
   const query = document.getElementById('search').value.trim();
   
   if (!query) {
@@ -74,7 +77,14 @@ document.getElementById('find-btn').addEventListener('click', async () => {
     searchResults = await fetchSearchResults(query); // Fetch new results 
     displayResults(searchResults); 
   }
-});
+}
+
+// on enterkey click after typing
+function handleSearchKeydown(event){
+  if(event.key === 'Enter'){
+    handleSearch();
+  }
+}
 
 // loading animation effect
 function showLoadingAnimation(show) {
