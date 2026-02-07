@@ -56,7 +56,9 @@ YT-video-demo/
      ```
 
 3. **Access the application**:
-   - Open your browser and navigate to the local server URL (e.g., `http://localhost:8000/YT vid/`)
+   - Open your browser and navigate to the local server URL
+   - Note: The folder name contains a space, so use URL encoding: `http://localhost:8000/YT%20vid/`
+   - Or simply open `index.html` directly from your file browser
 
 ## Usage Guide
 
